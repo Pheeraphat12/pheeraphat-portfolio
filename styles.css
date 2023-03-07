@@ -28,41 +28,6 @@ body {
   height: 100vh;
 }
 
-/* Hambergur Menu */
-
-.hamburger-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  width: max-content;
-  position: relative;
-  left: 85%;
-  z-index: 2;
-  cursor: pointer;
-}
-
-.hamburger-menu::before,
-.hamburger-menu::after,
-.hamburger-menu input {
-  content: "";
-  width: var(--bar-width);
-  height: var(--bar-height);
-  background-color: #0088a9;
-  border-radius: 10px;
-}
-
-.hamburger-menu input {
-  appearance: none;
-  padding: 0;
-  margin: 0;
-  outline: none;
-  pointer-events: none;
-}
-
-/* .hamburger-menu input:checked {
-  background-color: red;
-} */
-
 /* Nav Bar Section */
 
 li,
