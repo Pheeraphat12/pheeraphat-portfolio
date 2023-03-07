@@ -18,12 +18,50 @@
   --clr-h1: #32a852;
   --t-clr: #edf0f1;
   --fm: "Montez", cursive;
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hambergur-gap: 6px;
 }
 
 body {
   background-color: var(--clr-bg);
   height: 100vh;
 }
+
+/* Hambergur Menu */
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: max-content;
+  position: relative;
+  left: 85%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: #0088a9;
+  border-radius: 10px;
+}
+
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+/* .hamburger-menu input:checked {
+  background-color: red;
+} */
 
 /* Nav Bar Section */
 
@@ -83,6 +121,58 @@ button:hover {
   background-color: rgba(0, 136, 169, 0.8);
 }
 
+.nav__links {
+  list-style-type: none;
+  display: flex;
+}
+.nav__links li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 20px;
+  font-weight: 700;
+  transition: 0.4s all;
+}
+
+li.navbar-dropdown {
+  position: relative;
+}
+
+.nav__links li.navbar-dropdown:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.nav__links li.navbar-dropdown .dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding: 10px 10px;
+  top: 100%;
+  transform: translateY(50px);
+  left: 0;
+  width: auto;
+  background-color: #333;
+  box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  z-index: 111;
+  transition: 0.4s all;
+  border-radius: 6px;
+}
+.nav__links li.navbar-dropdown .dropdown a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+.navbar-dropdown .dropdown a:hover {
+  padding-left: 30px;
+}
+.nav__links li a:hover {
+  color: var(--clr-text);
+}
+
 /* All Pages Title Srtting */
 
 .all-title_container {
@@ -111,7 +201,7 @@ button:hover {
   transform: translate(-50%, -40%);
 }
 
-p#text {
+.text_container {
   font-size: 1rem;
   padding: 1.5em 0.5em;
   color: #fff;
@@ -120,6 +210,9 @@ p#text {
   left: 50%;
   transform: translate(-50%);
   letter-spacing: 2px;
+  border-radius: 10px;
+  background: #333;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 p strong {
@@ -172,6 +265,23 @@ p strong {
   width: 800px;
 }
 
+#about-skills {
+  background: #333;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 10px 15px;
+  color: #edf0f1;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+}
+
+#about-skills {
+  height: 60px;
+}
+
 h2 {
   color: #fff;
   text-align: center;
@@ -202,6 +312,7 @@ img#midkent__img2 {
 }
 
 .skills_container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -519,33 +630,393 @@ td {
   color: #f00;
 }
 
-/*
-=====================================
-            Media Queries
-===================================== 
-*/
+/*==========================================================================
+                            Media Queries
+==========================================================================*/
 
 /*
-=====================================
+==========================================================================
             up to 960 to 1200
-===================================== 
+========================================================================== 
 */
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
+  .nav__links {
+    display: none;
+  }
 }
 
 /*
-=====================================
+==========================================================================
             Tablet Portrait size to standard 960
-===================================== 
+==========================================================================
 */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+  #page__imgs #img1,
+  #img2,
+  #img3 {
+    width: 250px;
+    height: 400px;
+  }
+
+  .project1__img img,
+  .project2__img img,
+  .project3__img img {
+    width: 360px;
+    margin: 5px;
+  }
+
+  .grade_container {
+    width: 730px;
+    border-spacing: 5px;
+  }
+
+  .home_page-container {
+    width: 730px;
+  }
+
+  #page__imgs #img1,
+  #img2,
+  #img3 {
+    width: 250px;
+  }
 }
 
 /*
-=====================================
+==========================================================================
             All less than 959
-===================================== 
+========================================================================== 
 */
 @media only screen and (max-width: 959px) {
+  .nav__links {
+    display: none;
+  }
+
+  #page__imgs #img1,
+  #img2,
+  #img3 {
+    width: 260px;
+    height: 400px;
+  }
+
+  #abot-me_content,
+  #about-me__imgs {
+    top: 30px;
+  }
+}
+
+/*
+==========================================================================
+            Mobile / Tablet less than 767
+========================================================================== 
+*/
+@media only screen and (max-width: 767px) {
+  .nav__links {
+    display: none;
+  }
+
+  #page__imgs #img1,
+  #img2,
+  #img3 {
+    width: 230px;
+    height: 400px;
+  }
+
+  #about-text,
+  #about-skills {
+    width: 730px;
+  }
+
+  #abot-me_content {
+    top: 70px;
+  }
+
+  #about-me__imgs {
+    top: 65px;
+  }
+  img#code_image1,
+  img#midkent__img2 {
+    margin: 5px;
+    width: 350px;
+  }
+  .project1__img img,
+  .project2__img img,
+  .project3__img img {
+    margin: 5px;
+    width: 370px;
+  }
+  .grade_container {
+    width: 730px;
+  }
+
+  table,
+  tr,
+  th,
+  td {
+    border-spacing: 5px;
+  }
+
+  .all-projects_container {
+    width: 730px;
+  }
+}
+
+/*
+==========================================================================
+            Mobile / Tablet less than 480
+========================================================================== 
+*/
+@media only screen and (max-width: 480px) {
+  .nav__links {
+    display: none;
+  }
+
+  .midkent_btn {
+    display: none;
+  }
+
+  #page__imgs #img1,
+  #img2,
+  #img3 {
+    width: 400px;
+    height: 500px;
+    padding: 0;
+    margin: 5px;
+  }
+
+  #page__imgs {
+    display: unset;
+    position: absolute;
+    top: -230px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 0;
+    margin: 0;
+  }
+
+  .all-title_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+  }
+
+  #text {
+    position: relative;
+    top: 5%;
+    width: 380px;
+    height: 180px;
+  }
+
+  .text_container {
+    position: absolute;
+    top: 1325px;
+  }
+
+  .about-me_container {
+    width: 480px;
+  }
+
+  #about-text {
+    width: 380px;
+    line-height: 20px;
+    position: relative;
+    top: 295px;
+  }
+
+  #about-skills {
+    height: auto;
+    width: 380px;
+    position: relative;
+    top: 295px;
+  }
+
+  .skills_container {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  #about-me__imgs {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    position: relative;
+    top: 300px;
+  }
+
+  .skills {
+    width: 350px;
+  }
+
+  h2 {
+    position: relative;
+    top: 290px;
+  }
+
+  .contact_container {
+    top: 55%;
+  }
+
+  .form__box {
+    width: 380px;
+  }
+
+  .contact_container {
+    width: 380px;
+  }
+
+  #contact__detail {
+    width: 380px;
+  }
+
+  .all-projects_container {
+    width: 380px;
+    position: relative;
+    top: 305px;
+  }
+
+  .units {
+    flex-direction: column;
+  }
+  div.projects__text {
+    width: auto;
+    height: auto;
+    font-size: 0.75rem;
+  }
+
+  div.unit__box1,
+  div.unit__box2 {
+    height: auto;
+    width: auto;
+  }
+
+  .images_container {
+    top: 90%;
+  }
+
+  div.project1__img,
+  div.project2__img,
+  div.project3__img {
+    flex-direction: column;
+  }
+
+  .grade_container {
+    width: 450px;
+  }
+
+  table,
+  tr,
+  th,
+  td {
+    font-size: 16px;
+  }
+}
+
+/*
+==========================================================================
+            Mobile / Tablet less than 350
+========================================================================== 
+*/
+@media only screen and (max-width: 350px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .midkent_btn {
+    display: none;
+  }
+
+  #page__imgs #img1,
+  #img2,
+  #img3 {
+    width: 300px;
+  }
+
+  #text {
+    width: 280px;
+    height: auto;
+  }
+
+  button {
+    padding: 0;
+  }
+
+  #about-text {
+    width: 330px;
+  }
+
+  #about-skills {
+    width: 330px;
+  }
+
+  .skills {
+    width: 300px;
+  }
+
+  img#code_image1,
+  img#midkent__img2 {
+    width: 330px;
+  }
+
+  .btn__submit {
+    padding: 9px 15px;
+  }
+
+  #contact__detail {
+    letter-spacing: 1px;
+  }
+
+  #contact__detail {
+    width: 330px;
+    position: relative;
+  }
+
+  .form__box {
+    width: 330px;
+    position: relative;
+  }
+
+  .detail_container {
+    width: auto;
+    margin: 5px 0;
+  }
+
+  .form_container {
+    width: 330px;
+    margin: 5px 0;
+  }
+
+  .project1__title,
+  .project2__title,
+  .project3__title {
+    width: auto;
+  }
+
+  .project1__img img,
+  .project2__img img,
+  .project3__img img {
+    width: 330px;
+  }
+
+  .grade_container {
+    width: 330px;
+  }
+
+  .all-projects_container {
+    width: 330px;
+  }
+
+  .project2_contianer {
+    top: 325px;
+    position: relative;
+  }
+
+  .project3_contianer {
+    position: relative;
+    top: 30px;
+  }
 }
