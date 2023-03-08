@@ -728,6 +728,10 @@ td {
   .dropdown_menu {
     display: block;
   }
+
+  .nav__links {
+    display: none;
+  }
 }
 
 /*
