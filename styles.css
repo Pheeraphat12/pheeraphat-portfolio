@@ -717,6 +717,19 @@ td {
 */
 
 @media only screen and (max-width: 1200px) {
+  .dropdown_menu {
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+  .midkent_btn {
+    display: none;
+  }
 }
 
 /*
@@ -725,6 +738,20 @@ td {
 ==========================================================================
 */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+  .dropdown_menu {
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+  .midkent_btn {
+    display: none;
+  }
+
   #page__imgs #img1,
   #img2,
   #img3 {
