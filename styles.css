@@ -724,9 +724,6 @@ td {
   .nav__links {
     display: none;
   }
-  .hamburger-menu {
-    display: flex;
-  }
   .midkent_btn {
     display: none;
   }
@@ -744,9 +741,6 @@ td {
 
   .nav__links {
     display: none;
-  }
-  .hamburger-menu {
-    display: flex;
   }
   .midkent_btn {
     display: none;
@@ -788,18 +782,12 @@ td {
 ========================================================================== 
 */
 @media only screen and (max-width: 959px) {
-  .dropdown_menu {
-    display: block;
-  }
-
   .nav__links {
     display: none;
   }
-  .hamburger-menu {
-    display: flex;
-  }
-  .midkent_btn {
-    display: none;
+
+  .icons {
+    display: block;
   }
 
   #page__imgs #img1,
