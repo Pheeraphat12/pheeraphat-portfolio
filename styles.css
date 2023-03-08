@@ -717,12 +717,15 @@ td {
 */
 
 @media only screen and (max-width: 1200px) {
+  .dropdown_menu {
+    display: block;
+  }
+
   .nav__links {
     display: none;
   }
-
-  .icons {
-    display: block;
+  .midkent_btn {
+    display: none;
   }
 }
 
@@ -737,6 +740,10 @@ td {
   }
 
   .icons {
+    display: block;
+  }
+
+  .dropdown_menu {
     display: block;
   }
 
@@ -784,6 +791,10 @@ td {
     display: block;
   }
 
+  .dropdown_menu {
+    display: block;
+  }
+
   #page__imgs #img1,
   #img2,
   #img3 {
@@ -808,6 +819,10 @@ td {
   }
 
   .icons {
+    display: block;
+  }
+
+  .dropdown_menu {
     display: block;
   }
 
@@ -872,6 +887,10 @@ td {
   }
 
   .icons {
+    display: block;
+  }
+
+  .dropdown_menu {
     display: block;
   }
 
@@ -1028,6 +1047,10 @@ td {
 
   .midkent_btn {
     display: none;
+  }
+
+  .dropdown_menu {
+    display: block;
   }
 
   #page__imgs #img1,
