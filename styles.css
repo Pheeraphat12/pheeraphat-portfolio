@@ -717,19 +717,6 @@ td {
 */
 
 @media only screen and (max-width: 1200px) {
-  .nav__links {
-    display: none;
-  }
-  .dropdown_menu {
-    display: block;
-  }
-  .icons {
-    display: block;
-  }
-
-  .midkent_btn {
-    display: none;
-  }
 }
 
 /*
