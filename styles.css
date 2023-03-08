@@ -717,15 +717,12 @@ td {
 */
 
 @media only screen and (max-width: 1200px) {
-  .dropdown_menu {
-    display: block;
-  }
-
   .nav__links {
     display: none;
   }
-  .midkent_btn {
-    display: none;
+
+  .icons {
+    display: block;
   }
 }
 
@@ -735,15 +732,12 @@ td {
 ==========================================================================
 */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .dropdown_menu {
-    display: block;
-  }
-
   .nav__links {
     display: none;
   }
-  .midkent_btn {
-    display: none;
+
+  .icons {
+    display: block;
   }
 
   #page__imgs #img1,
