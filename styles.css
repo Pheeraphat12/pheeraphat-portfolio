@@ -725,17 +725,6 @@ td {
 ==========================================================================
 */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .nav__links {
-    display: none;
-  }
-  .midkent_btn {
-    display: none;
-  }
-
-  .icons {
-    display: block;
-  }
-
   #page__imgs #img1,
   #img2,
   #img3 {
