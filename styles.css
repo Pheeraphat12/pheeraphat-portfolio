@@ -883,20 +883,20 @@ td {
 ========================================================================== 
 */
 @media only screen and (max-width: 480px) {
-  .nav__links {
-    display: none;
+  .icons {
+    display: block;
   }
 
   .midkent_btn {
     display: none;
   }
 
-  .icons {
+  .dropdown_menu {
     display: block;
   }
 
-  .dropdown_menu {
-    display: block;
+  .nav__links {
+    display: none;
   }
 
   #page__imgs #img1,
@@ -1045,13 +1045,13 @@ td {
             Mobile / Tablet less than 350
 ========================================================================== 
 */
-@media only screen and (max-width: 350px) and (max-width: 375px) {
-  .icons {
-    display: block;
+@media only screen and (max-width: 350px) {
+  .nav__links {
+    display: none;
   }
 
-  .midkent_btn {
-    display: none;
+  .icons {
+    display: block;
   }
 
   .dropdown_menu {
