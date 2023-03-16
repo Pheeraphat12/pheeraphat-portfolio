@@ -15,34 +15,57 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="imgs/thailand.png" type="image/x-icon" />
   </head>
-  <body id="home_page">
+  <body>
     <header>
       <!-- Start Navbar -->
       <a class="logo" href="#"
         ><span><strong>Pheeraphat</strong></span></a
       >
+
       <nav>
         <ul class="nav__links" id="myNav">
           <li><a href="index.html">HOME</a></li>
           <li><a href="about.html">ABOUT</a></li>
           <li><a href="contact.html">CONTACT</a></li>
-          <li><a href="Projects/project1.html">Project 1</a></li>
-          <li><a href="Projects/project2.html">Project 2</a></li>
-          <li><a href="Projects/project3.html">Project 3</a></li>
+          <li class="navbar-dropdown">
+            <a href="#">Projects</a>
+            <div class="dropdown">
+              <a href="Projects/project1.html">Project 1</a>
+              <a href="Projects/project2.html">Project 2</a>
+              <a href="Projects/project3.html">Project 3</a>
+            </div>
+          </li>
           <li><a href="images.html">IMAGES</a></li>
           <li><a href="grade.html">GRADES</a></li>
+          <a
+            href="https://www.midkent.ac.uk/"
+            target="_blank"
+            class="link_midkent"
+          >
+            Midkent college
+          </a>
         </ul>
       </nav>
 
-      <a href="https://www.midkent.ac.uk/" target="_blank" class="contact_bt"
-        ><button>Midkent College</button></a
-      >
+      <div class="toggleBtn">
+        <span class="material-symbols-outlined"> menu </span>
+      </div>
 
       <!-- End Navbar -->
     </header>
+
     <!-- Start HOME section -->
     <div class="all-title_container">
       <h1 class="all-pages_title">
@@ -54,41 +77,50 @@
       <div id="page__imgs">
         <img
           id="img1"
-          src="imgs/thai_temple.jpg"
+          src="https://media.timeout.com/images/105240236/image.jpg"
           alt="my photo 1"
           id="homepage-photo"
         />
         <img
           id="img2"
-          src="imgs/ThaiFlag.jpg"
+          src="https://learnthaiwithmod.com/wp-content/uploads/2012/10/flag-of-Thailand1.jpg"
           alt="my photo 2"
           id="homepage-photo"
         />
         <img
           id="img3"
-          src="imgs/img_me.jpg"
+          src="imgs/img_girl.jpg"
           alt="my photo 3"
           id="homepage-photo"
         />
       </div>
-      <p id="text">
-        Hi, I am <strong>Pheeraphat</strong>. <br />
-        <strong>Welcome</strong> to my portfolio website. <br />
-        On this website you will get to know me. <br />
-        You will also get to know what course that I am doing college.
-        <br />
-        I am making this website by using
-        <span>
-          <a
-            class="stackoverflow"
-            href="https://stackoverflow.com/"
-            target="_blank"
-            >Stack Overflow
-          </a>
-        </span>
-        <br />
-        to help me to make this website.
-      </p>
+      <div class="text_container">
+        <p id="text">
+          Hi, I am <strong>Pheeraphat</strong>. <br />
+          <strong>Welcome</strong> to my portfolio website. <br />
+          On this website you will get to know me. <br />
+          You will also get to know what course that I am doing college.
+          <br />
+          I am making this website by using
+          <span>
+            <a
+              class="stackoverflow"
+              href="https://stackoverflow.com/"
+              target="_blank"
+              >Stack Overflow
+            </a>
+          </span>
+          <br />
+          to help me to make this website.
+        </p>
+      </div>
     </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+    <script>
+      const welcomMsg = "Hello, welcome to my website";
+      alert(welcomMsg);
+    </script>
   </body>
 </html>

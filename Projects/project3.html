@@ -15,34 +15,53 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="shortcut icon" href="../imgs/thailand.png" type="image/x-icon" />
   </head>
   <body>
     <header>
       <!-- Start Navbar -->
-      <!-- <img class="logo" src="#" alt="mylogo"> -->
       <a class="logo" href="#"
         ><span><strong>Pheeraphat</strong></span></a
       >
+
       <nav>
         <ul class="nav__links" id="myNav">
           <li><a href="../index.html">HOME</a></li>
           <li><a href="../about.html">ABOUT</a></li>
           <li><a href="../contact.html">CONTACT</a></li>
-          <li><a href="../Projects/project1.html">Project 1</a></li>
-          <li><a href="../Projects/project2.html">Project 2</a></li>
-          <li><a href="../Projects/project3.html">Project 3</a></li>
+          <li class="navbar-dropdown">
+            <a href="#">Projects</a>
+            <div class="dropdown">
+              <a href="../Projects/project1.html">Project 1</a>
+              <a href="../Projects/project2.html">Project 2</a>
+              <a href="../Projects/project3.html">Project 3</a>
+            </div>
+          </li>
           <li><a href="../images.html">IMAGES</a></li>
           <li><a href="../grade.html">GRADES</a></li>
+          <a
+            href="https://www.midkent.ac.uk/"
+            target="_blank"
+            class="link_midkent"
+          >
+            Midkent college
+          </a>
         </ul>
       </nav>
 
-      <a href="https://www.midkent.ac.uk/" target="_blank" class="contact_bt"
-        ><button>Midkent College</button></a
-      >
+      <div class="toggleBtn">
+        <span class="material-symbols-outlined"> menu </span>
+      </div>
+
       <!-- End Navbar -->
     </header>
+
     <!-- Start HOME section -->
 
     <div class="all-title_container">
@@ -51,7 +70,7 @@
       </h1>
     </div>
 
-    <div class="all-projects_container">
+    <div class="all-projects_container project3_contianer">
       <div id="main__projects">
         <div class="projects__text">
           <p>
@@ -66,9 +85,7 @@
               <strong>Unit 1:</strong> This unit will help me understand the
               main technologies and processes behind the internet and
               investigate how they come together to let me view websites and
-              send information across the world. The internet and web of
-              tomorrow will be even more powerful, more connected, more
-              intuitive and a more important part of our lives.
+              send information across the world.
             </p>
           </div>
 
@@ -83,5 +100,12 @@
         </div>
       </div>
     </div>
+
+    <div class="seeproject_images">
+      <p>See all projects images - <a href="../images.html">Click here!</a></p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../app.js"></script>
   </body>
 </html>
