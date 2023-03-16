@@ -18,14 +18,28 @@
   --clr-h1: #32a852;
   --t-clr: #edf0f1;
   --fm: "Montez", cursive;
+<<<<<<< HEAD
   --bar-width: 60px;
   --bar-height: 8px;
   --hambergur-gap: 6px;
+=======
+  --bar-width: 40px;
+  --bar-height: 5px;
+  --hamburger-gap: 5px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
 }
 
 body {
   background-color: var(--clr-bg);
   height: 100vh;
+}
+
+.icons {
+  color: #0088a9;
+  font-size: 40px;
+  display: none;
 }
 
 /* Nav Bar Section */
@@ -86,6 +100,7 @@ header {
   color: #0088a9;
 }
 
+<<<<<<< HEAD
 .link_midkent {
   padding: 10px;
   background-color: rgba(0, 136, 169, 1);
@@ -96,6 +111,19 @@ header {
 }
 
 .link_midkent:hover {
+=======
+.midkent_btn {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 16px;
+}
+
+.midkent_btn:hover {
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   background-color: rgba(0, 136, 169, 0.8);
 }
 
@@ -126,6 +154,98 @@ button:hover {
   transition: 0.4s all;
 }
 
+<<<<<<< HEAD
+=======
+/* DROPDOWN MENU */
+
+.dropdown_menu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  z-index: 999;
+  right: 1rem;
+  top: 6rem;
+  width: 300px;
+  height: 0;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  height: 300px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown_menu .midkent_btn {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  border: none;
+  background: #0088a9;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.drop_menu {
+  border: 2px solid #0088a9;
+  position: relative;
+  border-radius: 10px;
+  height: 300px;
+}
+
+.dropdown_menu .midkent_btn:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+.dropdown_menu li.navbar-dropdown:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.dropdown_menu li.navbar-dropdown .dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding: 5px 5px;
+  top: 100%;
+  transform: translateY(50px);
+  left: 10px;
+  width: 200px;
+  background-color: #333;
+  box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.3);
+  z-index: 111;
+  transition: 0.4s all;
+  border-radius: 6px;
+  border: 2px solid #0088a9;
+}
+.dropdown_menu li.navbar-dropdown .dropdown a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: 400;
+  text-align: center;
+  display: block;
+}
+
+.dropdown_menu li a:hover {
+  color: var(--clr-text);
+}
+
+/* NAVBAR DROPDROW */
+
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
 li.navbar-dropdown {
   position: relative;
 }
@@ -165,11 +285,14 @@ li.navbar-dropdown {
   color: var(--clr-text);
 }
 
+<<<<<<< HEAD
 /* Images Border Radius */
 img {
   border-radius: 10px;
 }
 
+=======
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
 /* All Pages Title Srtting */
 
 .all-title_container {
@@ -626,6 +749,7 @@ td {
   color: #f00;
 }
 
+<<<<<<< HEAD
 .seeproject_images {
   color: #fff;
 }
@@ -655,6 +779,8 @@ td {
   padding: 20px 15px;
 }
 
+=======
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
 /*==========================================================================
                             Media Queries
 ==========================================================================*/
@@ -669,6 +795,7 @@ td {
     display: block;
   }
 
+<<<<<<< HEAD
   .nav__links {
     display: none;
     background: #444;
@@ -701,11 +828,29 @@ td {
 
   .nav__links li a {
     margin: 20px;
+=======
+@media only screen and (max-width: 1200px) {
+  .icons {
+    display: block;
+  }
+
+  .midkent_btn {
+    display: none;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 }
 
 /*
 ==========================================================================
+<<<<<<< HEAD
             All less than 959
 ========================================================================== 
 */
@@ -737,6 +882,70 @@ td {
 
   .nav__links li a {
     margin: 20px;
+=======
+            Tablet Portrait size to standard 960
+==========================================================================
+*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .nav__links {
+    display: none;
+  }
+
+  .icons {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+
+  #page__imgs #img1,
+  #img2,
+  #img3 {
+    width: 250px;
+    height: 400px;
+  }
+
+  .project1__img img,
+  .project2__img img,
+  .project3__img img {
+    width: 360px;
+    margin: 5px;
+  }
+
+  .grade_container {
+    width: 730px;
+    border-spacing: 5px;
+  }
+
+  .home_page-container {
+    width: 730px;
+  }
+
+  #page__imgs #img1,
+  #img2,
+  #img3 {
+    width: 250px;
+  }
+}
+
+/*
+==========================================================================
+            All less than 959
+========================================================================== 
+*/
+@media only screen and (max-width: 959px) {
+  .nav__links {
+    display: none;
+  }
+
+  .icons {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   #page__imgs #img1,
@@ -745,11 +954,16 @@ td {
     width: 260px;
     height: 400px;
   }
+<<<<<<< HEAD
   /* About Me */
+=======
+
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   #abot-me_content,
   #about-me__imgs {
     top: 30px;
   }
+<<<<<<< HEAD
 
   img#code_image1,
   img#midkent__img2 {
@@ -771,10 +985,13 @@ td {
     font-size: 16px;
     width: 850px;
   }
+=======
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
 }
 
 /*
 ==========================================================================
+<<<<<<< HEAD
             Mobile / Tablet less than 768
 ========================================================================== 
 */
@@ -785,6 +1002,21 @@ td {
   }
 
   ul.open {
+=======
+            Mobile / Tablet less than 767
+========================================================================== 
+*/
+@media only screen and (max-width: 767px) {
+  .nav__links {
+    display: none;
+  }
+
+  .icons {
+    display: block;
+  }
+
+  .dropdown_menu {
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
     display: block;
   }
 
@@ -793,6 +1025,7 @@ td {
   #img3 {
     width: 230px;
     height: 400px;
+<<<<<<< HEAD
     border-radius: 10px;
   }
 
@@ -800,10 +1033,13 @@ td {
 
   .about-me_container {
     width: 630px;
+=======
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   #about-text,
   #about-skills {
+<<<<<<< HEAD
     width: 630px;
   }
 
@@ -835,11 +1071,37 @@ td {
   /* Grade Section */
   .grade_container {
     width: 660px;
+=======
+    width: 730px;
+  }
+
+  #abot-me_content {
+    top: 70px;
+  }
+
+  #about-me__imgs {
+    top: 65px;
+  }
+  img#code_image1,
+  img#midkent__img2 {
+    margin: 5px;
+    width: 350px;
+  }
+  .project1__img img,
+  .project2__img img,
+  .project3__img img {
+    margin: 5px;
+    width: 370px;
+  }
+  .grade_container {
+    width: 730px;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   table,
   tr,
   th,
+<<<<<<< HEAD
   td,
   .table__item {
     border-spacing: 5px;
@@ -923,6 +1185,14 @@ td {
 
   .grade_container {
     width: 530px;
+=======
+  td {
+    border-spacing: 5px;
+  }
+
+  .all-projects_container {
+    width: 730px;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 }
 
@@ -931,6 +1201,7 @@ td {
             Mobile / Tablet less than 480
 ========================================================================== 
 */
+<<<<<<< HEAD
 @media screen and (max-width: 480px) {
   .nav__links {
     display: none;
@@ -950,18 +1221,41 @@ td {
 
   .home_page-container {
     height: 100%;
+=======
+@media only screen and (max-width: 480px) {
+  .icons {
+    display: block;
+  }
+
+  .midkent_btn {
+    display: none;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   #page__imgs #img1,
   #img2,
   #img3 {
+<<<<<<< HEAD
     width: 350px;
     height: 400px;
+=======
+    width: 400px;
+    height: 500px;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
     padding: 0;
     margin: 5px;
   }
 
   #page__imgs {
+<<<<<<< HEAD
     display: block;
     position: relative;
     top: 65px;
@@ -969,6 +1263,15 @@ td {
     transform: translate(-50%);
     padding: 0;
     margin-top: 5%;
+=======
+    display: unset;
+    position: absolute;
+    top: -230px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 0;
+    margin: 0;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   .all-title_container {
@@ -982,12 +1285,18 @@ td {
   #text {
     position: relative;
     top: 5%;
+<<<<<<< HEAD
     width: auto;
     height: auto;
+=======
+    width: 380px;
+    height: 180px;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   .text_container {
     position: absolute;
+<<<<<<< HEAD
     top: 82.5rem;
     margin-top: 5px;
     width: 350px;
@@ -1006,24 +1315,49 @@ td {
     width: 350px;
     line-height: 20px;
     position: relative;
+=======
+    top: 1325px;
+  }
+
+  .about-me_container {
+    width: 480px;
+  }
+
+  #about-text {
+    width: 380px;
+    line-height: 20px;
+    position: relative;
+    top: 295px;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   #about-skills {
     height: auto;
+<<<<<<< HEAD
     width: 350px;
     position: relative;
     margin-bottom: 5px;
+=======
+    width: 380px;
+    position: relative;
+    top: 295px;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   .skills_container {
     position: relative;
+<<<<<<< HEAD
     display: block;
+=======
+    display: inline-block;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
     width: auto;
     left: 50%;
     transform: translate(-50%);
   }
 
   #about-me__imgs {
+<<<<<<< HEAD
     display: block;
     position: relative;
     left: 50%;
@@ -1033,10 +1367,22 @@ td {
 
   .skills {
     width: auto;
+=======
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    position: relative;
+    top: 300px;
+  }
+
+  .skills {
+    width: 350px;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   h2 {
     position: relative;
+<<<<<<< HEAD
   }
 
   img#code_image1,
@@ -1089,12 +1435,47 @@ td {
     width: 350px;
     height: auto;
     font-size: 1rem;
+=======
+    top: 290px;
+  }
+
+  .contact_container {
+    top: 55%;
+  }
+
+  .form__box {
+    width: 380px;
+  }
+
+  .contact_container {
+    width: 380px;
+  }
+
+  #contact__detail {
+    width: 380px;
+  }
+
+  .all-projects_container {
+    width: 380px;
+    position: relative;
+    top: 305px;
+  }
+
+  .units {
+    flex-direction: column;
+  }
+  div.projects__text {
+    width: auto;
+    height: auto;
+    font-size: 0.75rem;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   div.unit__box1,
   div.unit__box2 {
     height: auto;
     width: auto;
+<<<<<<< HEAD
     margin-left: 0;
     margin-top: 10px;
   }
@@ -1104,6 +1485,12 @@ td {
   .images_container {
     top: 11rem;
     width: 350px;
+=======
+  }
+
+  .images_container {
+    top: 90%;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   div.project1__img,
@@ -1112,21 +1499,31 @@ td {
     flex-direction: column;
   }
 
+<<<<<<< HEAD
   /* Grade Section */
 
   .grade_container {
     width: 350px;
     margin-top: 15px;
     top: 10.625rem;
+=======
+  .grade_container {
+    width: 450px;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   table,
   tr,
   th,
+<<<<<<< HEAD
   td,
   .table__item {
     font-size: 16px;
     width: 350px;
+=======
+  td {
+    font-size: 16px;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 }
 
@@ -1135,16 +1532,31 @@ td {
             Mobile / Tablet less than 350
 ========================================================================== 
 */
+<<<<<<< HEAD
 @media screen and (max-width: 350px) {
   /* Home Page Section */
 
   #page__imgs {
     top: 0;
+=======
+@media only screen and (max-width: 350px) {
+  .nav__links {
+    display: none;
+  }
+
+  .icons {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   #page__imgs #img1,
   #img2,
   #img3 {
+<<<<<<< HEAD
     width: 250px;
     height: 300px;
     padding: 0;
@@ -1170,10 +1582,35 @@ td {
   #about-me__imgs {
     width: 250px;
     margin-top: 20px;
+=======
+    width: 300px;
+  }
+
+  #text {
+    width: 280px;
+    height: auto;
+  }
+
+  button {
+    padding: 0;
+  }
+
+  #about-text {
+    width: 330px;
+  }
+
+  #about-skills {
+    width: 330px;
+  }
+
+  .skills {
+    width: 300px;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 
   img#code_image1,
   img#midkent__img2 {
+<<<<<<< HEAD
     width: 250px;
     height: 225px;
   }
@@ -1195,5 +1632,66 @@ td {
   #contact__detail p a {
     font-size: 16px;
     display: block;
+=======
+    width: 330px;
+  }
+
+  .btn__submit {
+    padding: 9px 15px;
+  }
+
+  #contact__detail {
+    letter-spacing: 1px;
+  }
+
+  #contact__detail {
+    width: 330px;
+    position: relative;
+  }
+
+  .form__box {
+    width: 330px;
+    position: relative;
+  }
+
+  .detail_container {
+    width: auto;
+    margin: 5px 0;
+  }
+
+  .form_container {
+    width: 330px;
+    margin: 5px 0;
+  }
+
+  .project1__title,
+  .project2__title,
+  .project3__title {
+    width: auto;
+  }
+
+  .project1__img img,
+  .project2__img img,
+  .project3__img img {
+    width: 330px;
+  }
+
+  .grade_container {
+    width: 330px;
+  }
+
+  .all-projects_container {
+    width: 330px;
+  }
+
+  .project2_contianer {
+    top: 325px;
+    position: relative;
+  }
+
+  .project3_contianer {
+    position: relative;
+    top: 30px;
+>>>>>>> 880721dfd8a19398a8acc33e5067554f6e81d191
   }
 }
